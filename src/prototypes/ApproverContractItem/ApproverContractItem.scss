@@ -1,0 +1,210 @@
+.approver-contract-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fff;
+
+  .tone-header {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+
+    .tone-brand {
+      color: #003366;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+    }
+
+    .tone-nav {
+      font-size: 14px;
+
+      a {
+        color: #8b2800;
+        text-decoration: underline;
+        margin-right: 10px;
+
+        &:hover {
+          color: #003366;
+        }
+      }
+    }
+  }
+
+  .contract-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+
+    h2 {
+      color: #003366;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .contract-no-badge {
+      background-color: #003366;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 2px;
+
+      .badge-title {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+      }
+
+      .badge-number {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .info-section {
+    margin-bottom: 20px;
+  }
+
+  .contract-section {
+    margin-bottom: 20px;
+
+    h3 {
+      color: #003366;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 15px 0 10px 0;
+    }
+  }
+
+  .two-column-grid {
+    display: flex;
+    gap: 40px;
+
+    .grid-column {
+      flex: 1;
+    }
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    line-height: 1.5;
+
+    .label-box {
+      width: 130px;
+      background-color: #e8ecef;
+      color: #333;
+      padding: 3px 8px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-right: 12px;
+      display: inline-block;
+    }
+
+    .value-text {
+      flex: 1;
+      font-size: 16px;
+
+      &.bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .approval-status-group {
+    margin-top: 15px;
+  }
+
+  .approve-action-row {
+    margin: 25px 0 15px 0;
+
+    .btn-approve {
+      background-color: #1e7e34;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #145a23;
+      }
+    }
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+
+  .rejection-section {
+    margin-top: 15px;
+
+    .hint-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .reject-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      textarea {
+        width: 320px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        font-family: inherit;
+        font-size: 16px;
+      }
+
+      .btn-reject {
+        background-color: #bd2130;
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: #921925;
+        }
+      }
+    }
+  }
+
+  .tone-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+
+    .back-link {
+      color: #8b2800;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .release-tag {
+      color: #666;
+    }
+  }
+}

@@ -1,0 +1,279 @@
+.instructor-contract-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fff;
+
+  .tone-header {
+    margin-bottom: 20px;
+
+    .tone-brand {
+      color: #003366;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+    }
+
+    .tone-nav {
+      font-size: 14px;
+
+      a {
+        color: #003366;
+        text-decoration: underline;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .contract-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    h2 {
+      color: #003366;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .contract-no-badge {
+      background-color: #003366;
+      color: #fff;
+      padding: 8px 16px;
+      text-align: center;
+      border-radius: 2px;
+
+      .badge-title {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+      }
+
+      .badge-number {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .user-info {
+    margin-bottom: 15px;
+  }
+
+  .contract-section {
+    h3 {
+      color: #003366;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0 8px 0;
+    }
+  }
+
+  .two-column-grid {
+    display: flex;
+    gap: 40px;
+
+    .grid-column {
+      flex: 1;
+    }
+  }
+
+  .info-row {
+    display: flex;
+    margin-bottom: 6px;
+    line-height: 1.5;
+
+    .label {
+      width: 140px;
+      color: #333;
+    }
+
+    .value {
+      flex: 1;
+
+      &.bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 18px 0;
+  }
+
+  .privacy-box {
+    background-color: #f4f6f9;
+    border: 1px solid #e0e5eb;
+    padding: 18px;
+    margin: 20px 0;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0 6px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 12px 0;
+      color: #222;
+
+      a {
+        color: #003366;
+      }
+    }
+
+    .checkbox-field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: bold;
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .parking-section {
+    margin: 18px 0;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .radio-option {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+
+      input[type="radio"] {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .plate-input-group {
+      margin: 6px 0 12px 26px;
+      font-size: 16px;
+
+      input {
+        border: 1px solid #ccc;
+        padding: 4px 6px;
+        width: 150px;
+        font-size: 16px;
+      }
+    }
+
+    .action-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+
+      .btn-accept {
+        background-color: #b0bec5;
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #b0bec5;
+        }
+
+        &:not(:disabled) {
+          background-color: #003366;
+        }
+      }
+
+      .action-hint {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+
+  .rejection-section {
+    margin-top: 18px;
+
+    .hint-text {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .reject-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      textarea {
+        width: 320px;
+        border: 1px solid #ccc;
+        padding: 6px;
+        font-family: inherit;
+        font-size: 16px;
+      }
+
+      .btn-reject {
+        background-color: #a81c1c;
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #891515;
+        }
+      }
+    }
+  }
+
+  .tone-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+
+    .back-link {
+      color: #b03a2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .release-tag {
+      color: #666;
+    }
+  }
+}
