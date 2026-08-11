@@ -1,7 +1,7 @@
 .instructor-contract-item {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #222222;
   max-width: 900px;
   margin: 0 auto;
   padding: 15px;
@@ -21,7 +21,7 @@
       font-size: 14px;
 
       a {
-        color: #003366;
+        color: #8b2800;
         text-decoration: underline;
         margin-right: 8px;
       }
@@ -36,9 +36,9 @@
 
     h2 {
       color: #003366;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
-      margin: 0;
+      margin: 15px 0 15px 0;
     }
 
     .contract-no-badge {
@@ -66,12 +66,25 @@
   }
 
   .contract-section {
+    margin: 0px 0 60px;
+
     h3 {
+      color: #003366;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    h4 {
       color: #003366;
       font-size: 16px;
       font-weight: bold;
-      margin: 12px 0 8px 0;
+      margin: 16px 0;
     }
+
+    a {
+        color: #8b2800;
+      }
   }
 
   .two-column-grid {
@@ -90,73 +103,71 @@
 
     .label {
       width: 140px;
-      color: #333;
+      color: #003366;
+      font-size: 14px;
+      text-transform: none;
+      font-weight: bold;
     }
 
     .value {
       flex: 1;
-
-      &.bold {
-        font-weight: bold;
-      }
+      font-weight: normal;
     }
   }
 
   .divider {
     border: none;
-    border-top: 1px solid #ddd;
-    margin: 18px 0;
+    border-top: 2px solid #003366;
+    margin: 16px 0;
   }
 
-  .privacy-box {
-    background-color: #f4f6f9;
-    border: 1px solid #e0e5eb;
-    padding: 18px;
-    margin: 20px 0;
+  // .privacy-box {
+  //   background-color: #f4f6f9;
+  //   border: 1px solid #e0e5eb;
+  //   padding: 18px;
+  //   margin: 20px 0;
 
-    h4 {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 12px 0 6px 0;
+  //   h4 {
+  //     font-size: 18px;
+  //     font-weight: bold;
+  //     color: #003366;
+  //     margin: 0 0 8px 0;
 
-      &:first-child {
-        margin-top: 0;
-      }
-    }
+  //     &:first-child {
+  //       margin-top: 0;
+  //     }
+  //   }
 
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0 0 12px 0;
-      color: #222;
+  //   p {
+  //     font-size: 16px;
+  //     line-height: 1.5;
+  //     margin: 0 0 12px 0;
+  //     color: #222;
+  //   }
 
-      a {
-        color: #003366;
-      }
-    }
+  //   .checkbox-field {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 8px;
+  //     margin-top: 16px;
+  //     font-size: 16px;
+  //     font-weight: bold;
 
-    .checkbox-field {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-      font-size: 16px;
-      font-weight: bold;
-
-      input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-      }
-    }
-  }
+  //     input[type="checkbox"] {
+  //       width: 16px;
+  //       height: 16px;
+  //     }
+  //   }
+  // }
 
   .parking-section {
     margin: 18px 0;
 
     h4 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
-      margin-bottom: 10px;
+      color: #003366;
+      margin: 0 0 8px 0;
     }
 
     .radio-option {
@@ -184,41 +195,11 @@
       }
     }
 
-    .action-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 18px;
 
-      .btn-accept {
-        background-color: #b0bec5;
-        color: #fff;
-        border: none;
-        padding: 8px 18px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 3px;
-
-        &:disabled {
-          cursor: not-allowed;
-          background-color: #b0bec5;
-        }
-
-        &:not(:disabled) {
-          background-color: #003366;
-        }
-      }
-
-      .action-hint {
-        font-size: 14px;
-        color: #555;
-      }
-    }
   }
 
   .rejection-section {
-    margin-top: 18px;
+    //margin-top: 18px;
 
     .hint-text {
       font-size: 16px;
@@ -254,6 +235,11 @@
         &:hover {
           background-color: #891515;
         }
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #b0bec5;
+        }
       }
     }
   }
@@ -277,3 +263,85 @@
     }
   }
 }
+
+    .action-row {
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+
+      .btn-accept {
+        background-color: #1e7e34;
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 3px;
+        width: fit-content;
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #b0bec5;
+        }
+
+        // &:not(:disabled) {
+        //   background-color: #1e7e34;
+        // }
+      }
+
+      .action-hint {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+
+    .section-header-description {
+        font-size: 16px;
+        color: #000 ;
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+
+    .contract-section {
+    margin-bottom: 10px;
+
+    h3 {
+      color: #003366;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+  }
+
+  .action-section {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      color: #003366;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+
+    h4 {
+      color: #003366;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+
+  }
+
+  .action-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+
+
+      

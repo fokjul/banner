@@ -138,7 +138,7 @@ const ApproverContractList = () => {
       <header className="tone-header">
         <h1 className="tone-brand">bcit secure student information system (TONE)</h1>
         <nav className="tone-nav">
-          <a href="#main">Main Menu</a>
+          <a href="/">Main Menu</a>
           <a href="#student">Student Self Service</a>
           <a href="#applications">Applications</a>
           <a href="#registration">Registration</a>

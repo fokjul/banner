@@ -4,9 +4,14 @@ import "./ApproverContractItem.scss";
 const ApproverContractItem = () => {
   const [rejectionReason, setRejectionReason] = useState("");
 
+  const isRejectDisabled = !rejectionReason.trim();
+  const isAcceptDisabled = false;
+
   const handleApprove = () => {
     alert("Contract 194523 Approved");
   };
+
+  const handleAccept = handleApprove;
 
   const handleReject = () => {
     if (!rejectionReason.trim()) {
@@ -22,7 +27,7 @@ const ApproverContractItem = () => {
       <header className="tone-header">
         <h1 className="tone-brand">bcit secure student information system (TONE)</h1>
         <nav className="tone-nav">
-          <a href="#main">Main Menu</a>
+          <a href="/">Main Menu</a>
           <a href="#student">Student Self Service</a>
           <a href="#applications">Applications</a>
           <a href="#registration">Registration</a>
@@ -35,29 +40,26 @@ const ApproverContractItem = () => {
       {/* Contract Title Banner */}
       <div className="contract-title-bar">
         <h2>PTS Contract Approval Details</h2>
-        <div className="contract-no-badge">
-          <span className="badge-title">CONTRACT NO.</span>
-          <span className="badge-number">194523</span>
-        </div>
       </div>
 
       {/* Personal Info Grid */}
-      <div className="info-section">
-        <div className="two-column-grid">
-          <div className="info-row">
-            <span className="label-box">Name:</span>
-            <span className="value-text bold">Amanda Paquette</span>
-          </div>
-          <div className="info-row">
-            <span className="label-box">BCIT Id:</span>
-            <span className="value-text bold">A00946706</span>
-          </div>
+      <section className="contract-section">
+                <h3>Instructor details</h3>
+                <hr className="divider" />
+        <div className="info-row">
+          <span className="label-box">Name:</span>
+          <span className="value-text">Chris Gresat</span>
         </div>
-      </div>
+        <div className="info-row">
+          <span className="label-box">BCIT ID:</span>
+          <span className="value-text">A00561485</span>
+        </div>
+      </section>
 
       {/* Course Details Section */}
       <section className="contract-section">
-        <h3>COURSE DETAILS</h3>
+        <h3>Course details</h3>
+        <hr className="divider" />
         <div className="two-column-grid">
           <div className="grid-column">
             <div className="info-row"><span className="label-box">Term:</span><span className="value-text">202610</span></div>
@@ -81,7 +83,8 @@ const ApproverContractItem = () => {
 
       {/* Contract Details Section */}
       <section className="contract-section">
-        <h3>CONTRACT DETAILS</h3>
+        <h3>Contract details</h3>
+        <hr className="divider" />
         <div className="two-column-grid">
           <div className="grid-column">
             <div className="info-row"><span className="label-box">Job Category:</span><span className="value-text">Lab Assistant</span></div>
@@ -121,16 +124,52 @@ const ApproverContractItem = () => {
       </section>
 
       {/* Approve Button */}
-      <div className="approve-action-row">
+      <section className="contract-section">
+        <h3>Contract actions</h3>
+        <hr className="divider" />
+        <div className="action-container">
+            
+         <div className="action-row">
+          <h4>Approve contract</h4>
+          <button 
+            type="button" 
+            className="btn-accept" 
+            disabled={isAcceptDisabled}
+            onClick={handleAccept}
+          >
+            Approve Contract
+          </button>
+        </div>
+          <div className="rejection-section">
+        <h4>Reject contract</h4>
+        <span className="section-header-description">To reject the contract specify the rejection reason below (mandatory). 
+          <br/>
+        Your comments will be returned to the originator along with the contract.</span>
+        
+        <div className="reject-controls">
+          <textarea 
+            rows="3" 
+            value={rejectionReason}
+            onChange={(e) => setRejectionReason(e.target.value)}
+          />
+          <button type="button" className="btn-reject" disabled={isRejectDisabled} onClick={handleReject}>
+            Reject
+          </button>
+        </div>
+        </div>
+        </div>
+       
+      </section>
+      {/* <div className="approve-action-row">
         <button type="button" className="btn-approve" onClick={handleApprove}>
           Approve Contract
         </button>
       </div>
 
-      <hr className="divider" />
+      <hr className="divider" /> */}
 
       {/* Rejection Section */}
-      <div className="rejection-section">
+      {/* <div className="rejection-section">
         <p className="hint-text">
           If rejecting the contract, please indicate why below. Your comments will be returned to the originator along with the contract.
         </p>
@@ -144,7 +183,7 @@ const ApproverContractItem = () => {
             Reject Contract
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Footer Navigation */}
       <footer className="tone-footer">

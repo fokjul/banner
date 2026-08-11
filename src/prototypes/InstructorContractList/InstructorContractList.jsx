@@ -26,7 +26,7 @@ const InstructorContractList = () => {
       <header className="tone-header">
         <h1 className="tone-brand">bcit secure student information system (TONE)</h1>
         <nav className="tone-nav">
-          <a href="#main">Main Menu</a>
+          <a href="/">Main Menu</a>
           <a href="#student">Student Self Service</a>
           <a href="#applications">Applications</a>
           <a href="#registration">Registration</a>
@@ -39,31 +39,36 @@ const InstructorContractList = () => {
       {/* Main Title */}
       <h2 className="page-title">PTS Contracts Summary</h2>
 
-      {/* Welcome Banner Box */}
+      {/* Welcome Banner Box 
       <div className="welcome-box">
         <h3>Welcome Chris Gresat,</h3>
         <p>
           Below you will find contracts that need to be accepted by you. The past 10 contracts previously accepted are displayed on this page; for the full history go to: <a href="#history">Full History</a>
         </p>
-      </div>
+      </div> */}
 
       {/* Table 1: Contracts awaiting acceptance */}
       <section className="contract-table-section">
         <div className="section-header">
-          <h3>Contracts awaiting your acceptance</h3>
-          <span className="badge awaiting-badge">2 awaiting</span>
+          <div className="section-header-title">
+            <h3>Contracts awaiting your acceptance</h3>
+            <span className="badge awaiting-badge">2 awaiting</span>
+          </div>
+          <p className="section-header-description">
+            Please accept the following contracts.
+          </p>
         </div>
 
         <table className="contracts-table">
           <thead>
             <tr>
-              <th>CONTRACT NO.</th>
-              <th>TERM</th>
-              <th>SUBJECT</th>
-              <th>COURSE NO.</th>
-              <th>START DATE</th>
-              <th>END DATE</th>
-              <th className="text-right">TOTAL PAY</th>
+              <th>Contract no.</th>
+              <th>Term</th>
+              <th>Subject</th>
+              <th>Course no.</th>
+              <th>Start date</th>
+              <th>End date</th>
+              <th className="text-right">Total pay</th>
             </tr>
           </thead>
           <tbody>
@@ -89,20 +94,23 @@ const InstructorContractList = () => {
       {/* Table 2: Contracts accepted */}
       <section className="contract-table-section">
         <div className="section-header">
-          <h3>Contracts accepted by you</h3>
-          <span className="badge accepted-badge">10 accepted</span>
+          <div className="section-header-title">
+            <h3>Contracts accepted by you</h3>
+            <span className="badge accepted-badge">10 accepted</span>
+          </div>
+          <p className="section-header-description">Below is the past 10 contracts previously accepted by you; for the full history go to: <a href="#history">Full History</a></p>
         </div>
 
         <table className="contracts-table">
           <thead>
             <tr>
-              <th>CONTRACT NO.</th>
-              <th>TERM</th>
-              <th>SUBJECT</th>
-              <th>COURSE NO.</th>
-              <th>START DATE</th>
-              <th>END DATE</th>
-              <th className="text-right">TOTAL PAY</th>
+              <th>Contract no.</th>
+              <th>Term</th>
+              <th>Subject</th>
+              <th>Course no.</th>
+              <th>Start date</th>
+              <th>End date</th>
+              <th className="text-right">Total pay</th>
             </tr>
           </thead>
           <tbody>

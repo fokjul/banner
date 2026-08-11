@@ -8,6 +8,7 @@ const InstructorContractItem = () => {
   const [rejectionReason, setRejectionReason] = useState("");
 
   const isAcceptDisabled = !agreedToTerms || !parkingOption;
+  const isRejectDisabled = !rejectionReason.trim();
 
   const handleAccept = () => {
     if (!isAcceptDisabled) {
@@ -29,7 +30,7 @@ const InstructorContractItem = () => {
       <header className="tone-header">
         <h1 className="tone-brand">bcit secure student information system (TONE)</h1>
         <nav className="tone-nav">
-          <a href="#main">Main Menu</a>
+          <a href="/">Main Menu</a>
           <a href="#student">Student Self Service</a>
           <a href="#applications">Applications</a>
           <a href="#registration">Registration</a>
@@ -41,120 +42,119 @@ const InstructorContractItem = () => {
 
       {/* Contract Title Banner */}
       <div className="contract-title-bar">
-        <h2>AGREEMENT TO PERFORM SERVICES</h2>
-        <div className="contract-no-badge">
-          <span className="badge-title">CONTRACT NO</span>
-          <span className="badge-number">194654</span>
-        </div>
+        <h2>Agreement to Perform Services</h2>
       </div>
 
       {/* Main Info Block */}
-      <div className="info-grid user-info">
+      <section className="contract-section">
+                <h3>Instructor details</h3>
+                <hr className="divider" />
         <div className="info-row">
           <span className="label">Name:</span>
-          <span className="value bold">Chris Gresat</span>
+          <span className="value">Chris Gresat</span>
         </div>
         <div className="info-row">
           <span className="label">BCIT ID:</span>
-          <span className="value bold">A00561485</span>
+          <span className="value">A00561485</span>
         </div>
-      </div>
-
-      <hr className="divider" />
+      </section>
 
       {/* Course Details Section */}
       <section className="contract-section">
-        <h3>COURSE DETAILS</h3>
+        <h3>Course details</h3>
+        <hr className="divider" />
         <div className="two-column-grid">
           <div className="grid-column">
             <div className="info-row">
               <span className="label">Term:</span>
-              <span className="value bold">202630</span>
+              <span className="value">202630</span>
             </div>
             <div className="info-row">
               <span className="label">Subject/Course:</span>
-              <span className="value bold">FMOT 1195</span>
+              <span className="value">FMOT 1195</span>
             </div>
             <div className="info-row">
               <span className="label">Course Ref No:</span>
-              <span className="value bold">52583</span>
+              <span className="value">52583</span>
             </div>
             <div className="info-row">
               <span className="label">Description:</span>
-              <span className="value bold">CIRO Retail Securities Exam (RSE) Preparation Course</span>
+              <span className="value">CIRO Retail Securities Exam (RSE) Preparation Course</span>
             </div>
           </div>
 
           <div className="grid-column">
             <div className="info-row">
               <span className="label">Site:</span>
-              <span className="value bold">Burnaby</span>
+              <span className="value">Burnaby</span>
             </div>
             <div className="info-row">
               <span className="label">Weekdays:</span>
-              <span className="value bold">Wed;</span>
+              <span className="value">Wed;</span>
             </div>
             <div className="info-row">
               <span className="label">Time:</span>
-              <span className="value bold">1800–2200</span>
+              <span className="value">1800–2200</span>
             </div>
             <div className="info-row">
               <span className="label">Start/End Date:</span>
-              <span className="value bold">09-SEP-2026 to 25-NOV-2026</span>
+              <span className="value">09-SEP-2026 to 25-NOV-2026</span>
             </div>
           </div>
         </div>
       </section>
 
-      <hr className="divider" />
-
       {/* Contract Details Section */}
       <section className="contract-section">
-        <h3>CONTRACT DETAILS</h3>
+        <h3>Contract details</h3>
+        <hr className="divider" />
         <div className="two-column-grid">
           <div className="grid-column">
-            <div className="info-row"><span className="label">Job Category:</span><span className="value bold">Instructor/Lecturer</span></div>
-            <div className="info-row"><span className="label">Union:</span><span className="value bold">FSA</span></div>
+            <div className="info-row"><span className="label">Contract No:</span><span className="value">194654</span></div>
+            <div className="info-row"><span className="label">Job Category:</span><span className="value">Instructor/Lecturer</span></div>
+            <div className="info-row"><span className="label">Union:</span><span className="value">FSA</span></div>
             <div className="info-row"><span className="label">Int/Ext:</span><span className="value"></span></div>
-            <div className="info-row"><span className="label">Substitute:</span><span className="value bold">N</span></div>
-            <div className="info-row"><span className="label">Timesheet:</span><span className="value bold">N</span></div>
-            <div className="info-row"><span className="label">Pick up Cheque:</span><span className="value bold">N</span></div>
-            <div className="info-row"><span className="label">Mail Cheque:</span><span className="value bold">N</span></div>
-            <div className="info-row"><span className="label">Direct Deposit:</span><span className="value bold">Y</span></div>
+            <div className="info-row"><span className="label">Substitute:</span><span className="value">N</span></div>
+            <div className="info-row"><span className="label">Timesheet:</span><span className="value">N</span></div>
+            <div className="info-row"><span className="label">Pick up Cheque:</span><span className="value">N</span></div>
+            <div className="info-row"><span className="label">Mail Cheque:</span><span className="value">N</span></div>
+            <div className="info-row"><span className="label">Direct Deposit:</span><span className="value">Y</span></div>
           </div>
 
           <div className="grid-column">
-            <div className="info-row"><span className="label">Position No:</span><span className="value bold">B71X43</span></div>
-            <div className="info-row"><span className="label">Fund:</span><span className="value bold">101</span></div>
-            <div className="info-row"><span className="label">Organization:</span><span className="value bold">114202</span></div>
-            <div className="info-row"><span className="label">Account Code:</span><span className="value bold">5343</span></div>
-            <div className="info-row"><span className="label">Program:</span><span className="value bold">201</span></div>
-            <div className="info-row"><span className="label">No. weeks:</span><span className="value bold">10.0</span></div>
-            <div className="info-row"><span className="label">Weekly Hours:</span><span className="value bold">0.0</span></div>
-            <div className="info-row"><span className="label">Total Hours:</span><span className="value bold">40.0</span></div>
-            <div className="info-row"><span className="label">Rate of Pay:</span><span className="value bold">$121.96</span></div>
-            <div className="info-row"><span className="label">Total Pay:</span><span className="value bold">$4,878.40</span></div>
+            <div className="info-row"><span className="label">Position No:</span><span className="value">B71X43</span></div>
+            <div className="info-row"><span className="label">Fund:</span><span className="value">101</span></div>
+            <div className="info-row"><span className="label">Organization:</span><span className="value">114202</span></div>
+            <div className="info-row"><span className="label">Account Code:</span><span className="value">5343</span></div>
+            <div className="info-row"><span className="label">Program:</span><span className="value">201</span></div>
+            <div className="info-row"><span className="label">No. weeks:</span><span className="value">10.0</span></div>
+            <div className="info-row"><span className="label">Weekly Hours:</span><span className="value">0.0</span></div>
+            <div className="info-row"><span className="label">Total Hours:</span><span className="value">40.0</span></div>
+            <div className="info-row"><span className="label">Rate of Pay:</span><span className="value">$121.96</span></div>
+            <div className="info-row"><span className="label">Total Pay:</span><span className="value">$4,878.40</span></div>
           </div>
         </div>
       </section>
 
-      <hr className="divider" />
-
       {/* Contact & Comments Section */}
       <section className="contract-section">
-        <h3>CONTACT & COMMENTS</h3>
-        <div className="info-row"><span className="label">BCIT Contact:</span><span className="value bold">Stacey Lu</span></div>
+        <h3>Contact & comments</h3>
+        <hr className="divider" />
+        <div className="info-row"><span className="label">BCIT Contact:</span><span className="value">Stacey Lu</span></div>
         <div className="info-row"><span className="label">Department:</span><span className="value"></span></div>
         <div className="info-row">
           <span className="label">Comments:</span>
-          <span className="value bold">
+          <span className="value">
             Class WILL NOT be held on Wednesday, September 30th (National Day for Truth and Reconciliation), and Wednesday, November 11th (Remembrance Day).
           </span>
         </div>
       </section>
 
       {/* Privacy Notice Box */}
-      <div className="privacy-box">
+      <section className="contract-section">
+        <h3>Privacy notice & consent</h3>
+        <hr className="divider" />
+        <div >
         <h4>Privacy Notice</h4>
         <p>
           Personal information provided on this form is collected pursuant to section 26(c) of the Freedom of Information and Protection of Privacy Act, 
@@ -190,20 +190,25 @@ const InstructorContractItem = () => {
           confidence at respect@bcit.ca or by phone at 604.432.8409.
         </p>
 
-        <div className="checkbox-field">
+      </div>
+      <div className="checkbox-field">
+        <h4>Agree to terms</h4>
           <input 
             type="checkbox" 
             id="agreeTerms" 
             checked={agreedToTerms}
             onChange={(e) => setAgreedToTerms(e.target.checked)} 
           />
-          <label htmlFor="agreeTerms">I agree to the above conditions</label>
+          <label htmlFor="agreeTerms">I agree to the above privacy notice and consent statement.</label>
         </div>
-      </div>
+      </section>
 
       {/* Parking Permit Form Section */}
-      <div className="parking-section">
-        <h4>Parking Permit — please choose one (mandatory)</h4>
+      <section className="contract-section">
+        <h3>Parking permit</h3>
+        <hr className="divider" />
+        <div className="parking-section">
+        <p className="section-header-description">Please choose one (mandatory)</p>
         
         <div className="radio-option">
           <input 
@@ -219,7 +224,7 @@ const InstructorContractItem = () => {
 
         {parkingOption === "need" && (
           <div className="plate-input-group">
-            <label htmlFor="plate">If accepting parking, please enter your licence plate number: </label>
+            <label htmlFor="plate">Enter your licence plate number: </label>
             <input 
               type="text" 
               id="plate" 
@@ -240,8 +245,19 @@ const InstructorContractItem = () => {
           />
           <label htmlFor="parkingNo">I do not need a Parking Permit for this contract.</label>
         </div>
+      </div>
+      </section>
 
-        <div className="action-row">
+
+
+      <section className="contract-section">
+        <h3>Contract actions</h3>
+              <hr className="divider" />
+        <div className="action-container">
+           <div className="rejection-section">
+        <h4>Accept contract</h4>
+        <span className="section-header-description">To accept the contract, agree to the conditions and choose a parking option above.</span>
+         <div className="action-row">
           <button 
             type="button" 
             className="btn-accept" 
@@ -250,28 +266,29 @@ const InstructorContractItem = () => {
           >
             Accept Contract
           </button>
-          <span className="action-hint">Agree to the conditions and choose a parking option to accept.</span>
         </div>
-      </div>
-
-      <hr className="divider" />
-
-      {/* Reject Section */}
-      <div className="rejection-section">
-        <p className="hint-text">
-          If you are rejecting the contract, please indicate why in the box provided. Your comments will be returned to the originator along with the contract.
-        </p>
+          </div>
+          <div className="rejection-section">
+        <h4>Reject contract</h4>
+        <span className="section-header-description">To reject the contract specify the rejection reason below (mandatory). 
+          <br/>
+        Your comments will be returned to the originator along with the contract.</span>
+        
         <div className="reject-controls">
           <textarea 
             rows="3" 
             value={rejectionReason}
             onChange={(e) => setRejectionReason(e.target.value)}
           />
-          <button type="button" className="btn-reject" onClick={handleReject}>
+          <button type="button" className="btn-reject" disabled={isRejectDisabled} onClick={handleReject}>
             Reject
           </button>
         </div>
-      </div>
+        </div>
+        </div>
+       
+      </section>
+      
 
       {/* Footer Navigation */}
       <footer className="tone-footer">
