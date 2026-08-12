@@ -5,6 +5,7 @@ html {
     width: 100vw;
     font-size: 100%;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
 *, *::before, *::after
@@ -17,6 +18,7 @@ body {
     padding: 0;
     color: colors.$primaryColor--darkBlue;
     font-family: fonts.$fontBody;
+    background-color: transparent;
 }
 
 h1, h2, h3, h4, h5 {

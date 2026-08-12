@@ -5,7 +5,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 15px;
-  background-color: #fff;
+  //background-color: #fff;
 
   .tone-header {
     border-bottom: 1px dotted #ccc;
@@ -28,7 +28,7 @@
         margin-right: 10px;
 
         &:hover {
-          color: #003366;
+          color: #8b2800;
         }
       }
     }
@@ -104,12 +104,12 @@
   .contracts-container {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-  }
+    gap: 32px;
 
-  .contract-card {
-    border: 1px solid #e0e5eb;
-    background-color: #fafbfc;
+    .contract-wrapper {
+    .contract-card {
+    border: none;
+    background-color: transparent;
     padding: 16px;
     display: flex;
     gap: 24px;
@@ -133,55 +133,18 @@
         .value {
           flex: 1;
 
-          // &.bold {
-          //   font-weight: bold;
-          // }
-
-          .contract-id-link {
-            color: #d9534f;
-            font-weight: bold;
+          .comments-link {
+            color: #8b2800;
             text-decoration: underline;
           }
 
-          .comments-link {
-            color: #d9534f;
+          .contract-id-link {
+            color: #8b2800;
+            font-weight: bold;
             text-decoration: underline;
           }
         }
       }
-
-      // .detail-row-split {
-      //   display: flex;
-      //   margin-bottom: 4px;
-      //   line-height: 1.4;
-      //   font-size: 15px;
-
-      //   .split-col {
-      //     display: flex;
-      //     flex: 1;
-
-      //     .label {
-      //       width: 140px;
-      //       color: #003366;
-      //       font-size: 14px;
-      //       font-weight: bold;
-      //     }
-
-      //     // .value {
-      //     //   &.bold {
-      //     //     font-weight: bold;
-      //     //   }
-      //     // }
-
-      //     &.align-right {
-      //       justify-content: flex-start;
-
-      //       .label {
-      //         width: 140px;
-      //       }
-      //     }
-      //   }
-      // }
 
       .margin-top-small {
         margin-top: 8px;
@@ -222,6 +185,8 @@
       }
     }
   }
+  }
+}
 
   .submit-section {
     margin-top: 25px;
@@ -249,14 +214,14 @@
   .action-container {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 32px;
   }
 
   .action-row {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 18px;
+    margin: 0;
 
     .btn-accept {
       background-color: #1e7e34;
@@ -348,4 +313,21 @@ h4 {
   color: #000;
   margin-bottom: 4px;
   line-height: 1.5;
+  margin-top: 0;
+}
+
+.contract-id-link {
+            color: #8b2800;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+
+.divider {
+    border: none;
+    border-top: 2px solid #003366;
+    margin: 0% 0;
+  }
+
+h3 {
+  margin-bottom: 8px;
 }

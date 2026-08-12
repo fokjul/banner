@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ApproverContractList.scss";
+import "./ApproverContractListOne.scss";
 
 const initialContracts = [
   {
@@ -109,7 +109,7 @@ const initialContracts = [
   },
 ];
 
-const ApproverContractList = () => {
+const ApproverContractListOne = () => {
   const [sortOrder, setSortOrder] = useState("Contract Number");
   const [decisions, setDecisions] = useState({});
   const [reasons, setReasons] = useState({});
@@ -202,9 +202,16 @@ const ApproverContractList = () => {
       {/* Contract Cards */}
       <div className="contracts-container">
         {initialContracts.map((contract) => (
-          <div key={contract.id} className="contract-card">
+          <div key={contract.id} className="contract-wrapper">
             {/* Left side: Information Details */}
-            <div className="contract-details">
+            <div className="contracts-header">
+              <h3><a href={`#contract-${contract.id}`} className="contract-id-link">
+                    Contract No: {contract.id}
+                  </a></h3>
+              <hr className="divider" />
+            </div>
+            <div className="contract-card">
+               <div className="contract-details">
               <div className="detail-row">
                 <span className="label">Contract:</span>
                 <span className="value">
@@ -301,40 +308,10 @@ const ApproverContractList = () => {
               </div>
             </div>
 
-            {/* Right side: Actions (Approve / Reject) */}
-            <div className="contract-actions">
-              <div className="action-option">
-                <input
-                  type="radio"
-                  name={`decision-${contract.id}`}
-                  id={`approve-${contract.id}`}
-                  checked={decisions[contract.id] === "approve"}
-                  onChange={() => handleDecisionChange(contract.id, "approve")}
-                />
-                <label htmlFor={`approve-${contract.id}`}>Approve at Level 2</label>
-              </div>
-
-              <div className="action-option">
-                <input
-                  type="radio"
-                  name={`decision-${contract.id}`}
-                  id={`reject-${contract.id}`}
-                  checked={decisions[contract.id] === "reject"}
-                  onChange={() => handleDecisionChange(contract.id, "reject")}
-                />
-                <label htmlFor={`reject-${contract.id}`}>Reject (Reason required):</label>
-              </div>
-
-              <textarea
-                rows="3"
-                value={reasons[contract.id] || ""}
-                onChange={(e) => handleReasonChange(contract.id, e.target.value)}
-                disabled={decisions[contract.id] !== "reject"}
-              />
-            </div>
              <div className="action-container">
             
-         {/* <div className="action-row">
+         <div className="action-row">
+          <h4>Approve contract on Level 2</h4>
           <button 
             type="button" 
             className="btn-accept" 
@@ -358,19 +335,16 @@ const ApproverContractList = () => {
             Reject
           </button>
         </div>
-        </div> */}
         </div>
+            </div>
+            </div>
+            
+            
+           
           </div>
         ))}
       </div>
 
-      {/* Submit Button */}
-      <div className="submit-section">
-        <button type="button" className="btn-submit-bundle" onClick={handleSubmitBundle}>
-          Submit Bundle
-        </button>
-        <span>Please note that to submit contracts for approval, you need to use the Submit Bundle button.</span>
-      </div>
 
       {/* Footer Navigation */}
       <div className="footer-nav-bar">
@@ -387,4 +361,4 @@ const ApproverContractList = () => {
   );
 };
 
-export default ApproverContractList;
+export default ApproverContractListOne;
